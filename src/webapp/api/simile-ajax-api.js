@@ -41,6 +41,7 @@ if (typeof SimileAjax == "undefined") {
         return null;
     };
     SimileAjax.includeJavascriptFile = function(doc, url, onerror, charset) {
+	return;
         onerror = onerror || "";
         if (doc.body == null) {
             try {
@@ -187,13 +188,13 @@ if (typeof SimileAjax == "undefined") {
         if (typeof SimileAjax_urlPrefix == "string") {
             SimileAjax.urlPrefix = SimileAjax_urlPrefix;
         } else {
-            var url = SimileAjax.findScript(document, "simile-ajax-api.js");
+            var url = SimileAjax.findScript(document, "big.js");
             if (url == null) {
                 SimileAjax.error = new Error("Failed to derive URL prefix for Simile Ajax API code files");
                 return;
             }
 
-            SimileAjax.urlPrefix = url.substr(0, url.indexOf("simile-ajax-api.js"));
+            SimileAjax.urlPrefix = url.substr(0, url.indexOf("big.js"));
         }
 
         SimileAjax.parseURLParameters(url, SimileAjax.params, {bundle:Boolean});
