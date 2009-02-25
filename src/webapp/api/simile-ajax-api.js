@@ -188,7 +188,7 @@ if (typeof SimileAjax == "undefined") {
         if (typeof SimileAjax_urlPrefix == "string") {
             SimileAjax.urlPrefix = SimileAjax_urlPrefix;
         } else {
-            var url = SimileAjax.findScript(document, "big.js");
+            var url = SimileAjax.findScript(document, "REPLACEME-REPLACEME.js");
             if (url == null) {
                 SimileAjax.error = new Error("Failed to derive URL prefix for Simile Ajax API code files");
                 return;
