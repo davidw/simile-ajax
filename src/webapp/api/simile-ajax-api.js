@@ -194,7 +194,7 @@ if (typeof SimileAjax == "undefined") {
                 return;
             }
 
-            SimileAjax.urlPrefix = url.substr(0, url.indexOf("big.js"));
+            SimileAjax.urlPrefix = url.substr(0, url.indexOf("REPLACEME-REPLACEME.js"));
         }
 
         SimileAjax.parseURLParameters(url, SimileAjax.params, {bundle:Boolean});
