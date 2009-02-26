@@ -179,7 +179,7 @@ if (typeof SimileAjax == "undefined") {
             "window-manager.js"
         ];
         var cssFiles = [
-            "graphics.css"
+            "timeplot-single.css"
         ];
         if (!("jQuery" in window) && !("$" in window)) {
         	javascriptFiles.unshift("jquery-1.3.2.min.js");
@@ -204,7 +204,10 @@ if (typeof SimileAjax == "undefined") {
             SimileAjax.includeJavascriptFiles(document, SimileAjax.urlPrefix + "scripts/", javascriptFiles);
         }
         SimileAjax.includeCssFiles(document, SimileAjax.urlPrefix + "styles/", cssFiles);
-        
+
+	/* We only use it once this way. */
+	SimileAjax.includeCssFile = function(doc, url) { return ; }
+
         SimileAjax.loaded = true;
     })();
 }
